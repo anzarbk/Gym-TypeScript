@@ -14,6 +14,7 @@ import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
     
+    
 }
 
 const benefits: Array<BenefitType> = [
@@ -44,11 +45,12 @@ const container = {
     }
 }
 
-const Benefits = ({setSelectedPage}: Props) => {
+const Benefits = ({setSelectedPage}: Props) => { 
   return (
       <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
           <motion.div className="div" onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
               {/* HEADER */}
+              <div>
               <motion.div className="md:my-5 md:w-3/5"
               initial="hidden"
               whileInView="visible"
@@ -63,7 +65,8 @@ const Benefits = ({setSelectedPage}: Props) => {
                   <p className="my-5 text-sm">We provide world class fitness equipment, trainers and classes to
             get you to your ultimate fitness goals with ease. We provide true
             care into each and every member.</p>
-              </motion.div>
+                  </motion.div>
+                  </div>
               {/* BENEFITS */}
               <motion.div className="md:flex items-center justify-between gap-8 mt-5"
                   initial="hidden"

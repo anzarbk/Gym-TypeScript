@@ -4,7 +4,7 @@ import { SelectedPage } from "./types"
 
 
 type Props = {
-    children: 'React.ReactNode'
+  children: React.ReactNode
     setSelectedPage:(value:SelectedPage)=>void
 }
 

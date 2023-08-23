@@ -77,7 +77,7 @@ const OurClasses = ({setSelectedPage}: Props) => {
                       {classes.map((item:ClassType, index) => (
                           <Class key={`${item.name}-${index}`}
                               name={item.name}
-                              description={item.description}
+                              description={item?.description! || ''}
                               image={item.image}
                           />
                       ))}
